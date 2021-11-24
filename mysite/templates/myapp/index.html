@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>First Django project</title>
+</head>
+<body>
+    <h1>I am index</h1>
+    <img src="{% static 'images/django.png' %}" alt="django">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Dept</th>
+        </tr>
+        {%for row in students%}
+
+        <tr>
+            <td>{{row.Name}}</td>
+            <td>{{row.Age}}</td>
+            <td>{{row.Dept}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
